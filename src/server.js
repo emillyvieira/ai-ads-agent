@@ -9,8 +9,13 @@ app.get('/', (req, res) => {
   res.send('Olá Mundo!')
 })
 
+app.get('/', (req, res) => {
+  res.send('Olá Mundo!')
+})
+
+
 app.post('/ai', aiController)
-app.post('/message', aiController)
+app.post('/messages', aiController)
 
 
 app.listen(port, () => {

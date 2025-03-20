@@ -1,24 +1,22 @@
-import express from 'express';
-import { aiController } from './controllers/aiController.js';
+import express from 'express'
+import { iaController } from './controllers/iaController.js'
+import cors from 'cors'
+import { messageController } from './controllers/messageController.js'
+
 const app = express()
 const port = 3000
 
+app.use(cors())
 app.use(express.json())
 
 app.get('/', (req, res) => {
-  res.send('Olá Mundo!')
+  res.send('Hello World!')
 })
 
-app.get('/', (req, res) => {
-  res.send('Olá Mundo!')
-})
+app.post('/ia', iaController)
 
-
-app.post('/ai', aiController)
-app.post('/messages', aiController)
-
+app.get('/messages', messageController)
 
 app.listen(port, () => {
-  console.log(`App de exemplo esta rodando na porta ${port}`)
+  console.log(`Example app listening on port ${port}`)
 })
-

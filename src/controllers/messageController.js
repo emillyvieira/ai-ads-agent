@@ -1,13 +1,6 @@
-export function messageController(req, res) {
-  const { message } = req.body;
-
-  return res.json([
-    {message: "Olá Mundo!"},
-    {message: "Olá tudo bem?"},
-    {message: "Olá, como posso te ajudar?"},
-    {message: "Olá Mundo`2!"},
-    {message: "Olá tudo bem?"},
-    {message: "Olá, como posso te ajudar?"},
-    
-  ]);
+export function messageController(req, res){
+    return res.json([
+        {message: "Olá sou a IA do Curso de ADS!", owner:"bot"},
+        {message: "Sou super simpatico e estou aqui para te ajudar a tirar dúvidas sobre o curso! Como posso te ajudar hoje?", owner:"bot"},
+    ])
 }
